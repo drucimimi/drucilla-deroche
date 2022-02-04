@@ -1,0 +1,20 @@
+.navigation{
+ display: flex;
+ justify-content: space-between;
+ background-color: $bg-color;
+ position: fixed;
+ bottom: 0;
+ min-width: 100%;
+ a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $sec-color;
+  margin: 10px;
+  padding: 10px;
+  font-weight: bold;
+ }
+ .active{
+   color: $main-color;
+ }
+}

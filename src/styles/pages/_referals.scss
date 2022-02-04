@@ -1,0 +1,31 @@
+.referals{
+ .carousel {
+  .carousel-indicators{
+   bottom: 0;
+   [data-bs-target] {
+    background-color: $text-color;
+   }
+  }
+  .carousel-item {
+   height: 24rem;
+   .carousel-caption {
+    bottom: 25%;
+    h5{
+     margin-bottom: 20px;
+     font-style: italic;
+     color: $main-color;
+    }
+    p{
+     font-weight: bold;
+     color: $text-color;
+    }
+   }
+  }
+  .carousel-control-prev, .carousel-control-next{
+   opacity: unset;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon{
+   filter: invert(31%) sepia(8%) saturate(6500%) hue-rotate(77deg) brightness(98%) contrast(80%);
+  }
+ }
+}

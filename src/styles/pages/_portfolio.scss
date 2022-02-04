@@ -1,0 +1,16 @@
+.portfolio{
+ .projects{
+  margin-top: 20px;
+  margin-bottom: 50px;
+  .project{
+   margin-bottom: 20px;
+   .card{
+    background-color: aliceblue;
+    a {
+     background-color: $main-color;
+     color: $bg-color;
+    }
+   }
+  }
+ }
+}

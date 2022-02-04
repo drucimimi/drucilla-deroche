@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import loadable from "@loadable/component";
 
-function App() {
+const Contact = loadable(() => import("./pages/Contact"));
+const Home = loadable(() => import("./pages/Home"));
+const NotFound = loadable(() => import("./pages/NotFound"));
+const Portfolio = loadable(() => import("./pages/Portfolio"));
+const Referals = loadable(() => import("./pages/Referals"));
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' exact element={<Home />} />
+        <Route path='/portfolio' exact element={<Portfolio />} />
+        <Route path='/referals' exact element={<Referals />} />
+        <Route path='/contact' exact element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

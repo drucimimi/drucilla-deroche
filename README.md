@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# drucilla-deroche
+C'est mon site personnel dans lequel je me présente et je vous fait part de mon portfolio et de mes recommandations. Vous pouvez également retrouver mon CV pour en apprendre davantage sur mon parcours.
+ 
+## Pour commencer
+1-Installer l'éditeur de texte choisi
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2-Installer l'outil de maquettage du site choisi
 
-## Available Scripts
+3-Créer l'application web avec Create-React-App
 
-In the project directory, you can run:
+4-Choisir un hébergeur de sites web gratuit, sécurisé et sans pub
 
-### `npm start`
+5-Construire le site
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+6-Créer l'architecture du site
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+7-Installer et configurer git
 
-### `npm test`
+8-Construire le site petit à petit
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+9-Faire valider le site
 
-### `npm run build`
+10-Publier le site
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pré-requis
+-Un outil de maquettage de sites web
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-Un éditeur de texte
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-Un navigateur web
 
-### `npm run eject`
+-Un hébergeur de sites web
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
+Si vous souhaitez voir le site en ligne, sautez cette étape.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Sinon, téléchargez le projet via GitHub ou en ligne de commande: git clone https://github.com/drucimimi/drucilla-deroche.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Démarrage
+Pour lancer le projet en ligne, tapez l'url suivante dans votre navigateur web : http://drucimimi.github.io/drucilla-deroche
 
-## Learn More
+Pour lancer le projet en local, lancer la commande `npm start` depuis votre terminal ou ligne de commandes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Fabriqué avec
+[Visual Studio Code](https://code.visualstudio.com/) - éditeur de texte
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[React](https://fr.reactjs.org/) - structure du site
 
-### Code Splitting
+[Node-Sass](https://www.npmjs.com/package/node-sass) - mise en forme du site 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[React-Icons](https://www.npmjs.com/package/react-icons) - utilisation des glyphicons
 
-### Analyzing the Bundle Size
+[NPM](https://nodejs.org/en/download/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Versions
+Dernière version stable : 0.1.0
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Dernière version : 0.1.0
 
-### Advanced Configuration
+Liste des versions : [Cliquer pour afficher](https://github.com/drucimimi/cv/tags)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Auteurs
+Drucilla DEROCHE
