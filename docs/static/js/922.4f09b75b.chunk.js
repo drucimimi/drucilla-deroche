@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdrucilla_deroche=self.webpackChunkdrucilla_deroche||[]).push([[922],{922:function(e,r,c){c.r(r);c(791);var u=c(184);r.default=function(){return(0,u.jsx)("div",{children:(0,u.jsx)("h1",{children:"Erreur 404"})})}}}]);
+//# sourceMappingURL=922.4f09b75b.chunk.js.map
