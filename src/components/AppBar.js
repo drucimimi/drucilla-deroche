@@ -2,19 +2,19 @@ import React from 'react';
 
 const AppBar = () => {
   let title = '';
-  const path = window.location.pathname; 
+  const path = window.location.hash; 
   
   switch (path) {
-    case "/":
+    case "#/":
     title="Accueil";
     break;
-    case "/portfolio":
+    case "#/portfolio":
     title="Portfolio";
     break;
-    case "/referals":
+    case "#/referals":
     title="Références";
     break;
-    case "/contact":
+    case "#/contact":
     title="Contact";
     break;  
     default:
