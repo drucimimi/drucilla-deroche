@@ -13,8 +13,8 @@ const Contact = () => {
     <h1>Besoin d'une développeuse Front-End ?</h1>
     <h2>N'hésitez pas à me contacter :</h2>
     <div className='social-menu'>
-     <a className='social-icon' href='mailto:drucilladeroche@protonmail.com' target="_blank"><FaEnvelope size={24} /></a>
-     <a className='social-icon' href="https://linkedin.com/in/drucilla-deroche" target="_blank"><FaLinkedin size={24} /></a>
+     <a className='social-icon' href='mailto:drucilladeroche@protonmail.com' target="_blank" rel='noreferrer'><FaEnvelope size={24} /></a>
+     <a className='social-icon' href="https://linkedin.com/in/drucilla-deroche" target="_blank" rel='noreferrer'><FaLinkedin size={24} /></a>
     </div>
    </main>
    <TabBar />

@@ -11,7 +11,7 @@ const Project = (props) => {
       <div class="card-body">
         <h5 class="card-title">{project.name}</h5>
         <p class="card-text">Stack : {project.stack}</p>
-        <a href={project.url} class="btn btn-primary" target="_blank">Voir le projet</a>
+        <a href={project.url} class="btn btn-primary" target="_blank" rel="noreferrer">Voir le projet</a>
       </div>
     </div>
    </div>
