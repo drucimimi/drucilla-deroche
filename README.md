@@ -38,7 +38,7 @@ Si vous souhaitez voir le site en ligne, sautez cette étape.
 Sinon, téléchargez le projet via GitHub ou en ligne de commande: git clone https://github.com/drucimimi/drucilla-deroche.git
 
 ## Démarrage
-Pour lancer le projet en ligne, tapez l'url suivante dans votre navigateur web : http://drucimimi.github.io/drucilla-deroche
+Pour lancer le projet en ligne, tapez l'url suivante dans votre navigateur web : https://drucilla-deroche.netlify.app/
 
 Pour lancer le projet en local, lancer la commande `npm start` depuis votre terminal ou ligne de commandes.
 
