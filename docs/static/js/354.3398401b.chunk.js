@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdrucilla_deroche=self.webpackChunkdrucilla_deroche||[]).push([[354],{354:function(l,e,c){c.r(e);c(791);var r=c(184);e.default=function(){return(0,r.jsx)("div",{className:"photo",children:(0,r.jsx)("img",{src:"./drucilla-deroche/img/drucilla.jpg",alt:"Photo de Drucilla DEROCHE",class:"rounded-pill",width:"245",height:"326"})})}}}]);
-//# sourceMappingURL=354.3398401b.chunk.js.map

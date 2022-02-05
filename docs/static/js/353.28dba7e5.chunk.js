@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdrucilla_deroche=self.webpackChunkdrucilla_deroche||[]).push([[353],{353:function(e,a,c){c.r(a);c(791);var r=c(184);a.default=function(){var e="";switch(window.location.pathname){case"/":e="Accueil";break;case"/portfolio":e="Portfolio";break;case"/referals":e="R\xe9f\xe9rences";break;case"/contact":e="Contact";break;default:e="Page non trouv\xe9e"}return(0,r.jsx)("header",{className:"header",children:(0,r.jsx)("h1",{children:e})})}}}]);
-//# sourceMappingURL=353.28dba7e5.chunk.js.map
