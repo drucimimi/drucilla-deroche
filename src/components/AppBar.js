@@ -18,7 +18,11 @@ const AppBar = () => {
     title="Contact";
     break;  
     default:
-    title="Page non trouvée";
+      if (window.location.pathname === "/"){
+        title = "Accueil"
+      } else {
+        title="Page non trouvée";
+      }
     break;
   }
   return (
