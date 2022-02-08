@@ -5,7 +5,16 @@
  position: fixed;
  bottom: 0;
  min-width: 100%;
- a{
+ .dropdown-toggle::after{
+   content: none;
+ }
+ .dropdown-item.active{
+  background-color: transparent;
+ }
+ button{
+   border: none;
+ }
+ a, button{
   display: flex;
   flex-direction: column;
   align-items: center;
