@@ -55,9 +55,9 @@ Pour lancer le projet en local, lancer la commande `npm start` depuis votre term
 
 
 ## Versions
-Dernière version stable : 0.1.1
+Dernière version stable : 0.1.2
 
-Dernière version : 0.1.1
+Dernière version : 0.1.2
 
 Liste des versions : [Cliquer pour afficher](https://github.com/drucimimi/cv/tags)
 
