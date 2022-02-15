@@ -1,6 +1,6 @@
 {
   "name": "drucilla-deroche",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "apollo-boost": "^0.4.9",

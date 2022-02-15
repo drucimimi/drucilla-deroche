@@ -49,15 +49,19 @@ Pour lancer le projet en local, lancer la commande `npm start` depuis votre term
 
 [Node-Sass](https://www.npmjs.com/package/node-sass) - mise en forme du site 
 
+[Bootstrap](https://getbootstrap.com/) - mise en page complémentaire du site
+
 [React-Icons](https://www.npmjs.com/package/react-icons) - utilisation des glyphicons
 
 [NPM](https://nodejs.org/en/download/)
 
+[Prisma1 Cloud](https://www.prisma.io/cloud)
+
 
 ## Versions
-Dernière version stable : 0.1.2
+Dernière version stable : 1.0.0
 
-Dernière version : 0.1.2
+Dernière version : 1.0.0
 
 Liste des versions : [Cliquer pour afficher](https://github.com/drucimimi/cv/tags)
 
