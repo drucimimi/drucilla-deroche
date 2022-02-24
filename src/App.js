@@ -1,11 +1,11 @@
 import React from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import loadable from "@loadable/component";
-import Portfolio from "./pages/Portfolio";
 
 const Contact = loadable(() => import("./pages/Contact"));
 const Home = loadable(() => import("./pages/Home"));
 const NotFound = loadable(() => import("./pages/NotFound"));
+const Portfolio = loadable(() => import("./pages/Portfolio"));
 const Referals = loadable(() => import("./pages/Referals"));
 
 const App = () => {

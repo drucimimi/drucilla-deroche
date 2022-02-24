@@ -55,13 +55,10 @@ Pour lancer le projet en local, lancer la commande `npm start` depuis votre term
 
 [NPM](https://nodejs.org/en/download/)
 
-[Prisma1 Cloud](https://www.prisma.io/cloud)
-
-
 ## Versions
-Dernière version stable : 1.0.0
+Dernière version stable : 1.1.0
 
-Dernière version : 1.0.0
+Dernière version : 1.1.0
 
 Liste des versions : [Cliquer pour afficher](https://github.com/drucimimi/cv/tags)
 

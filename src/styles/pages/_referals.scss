@@ -9,7 +9,8 @@
   .carousel-item {
    height: 28rem;
    .carousel-caption {
-    h5{
+    .title{
+     font-size: 18px;
      font-style: italic;
      color: $main-color;
     }

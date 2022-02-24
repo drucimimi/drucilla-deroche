@@ -8,6 +8,9 @@
  .dropdown-toggle::after{
    content: none;
  }
+ .dropdown-menu{
+   z-index: 1;
+ }
  .dropdown-item.active{
   background-color: transparent;
  }
@@ -19,6 +22,7 @@
   flex-direction: column;
   align-items: center;
   color: $sec-color;
+ 
   margin: 10px;
   padding: 10px;
   font-weight: bold;
