@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import loadable from "@loadable/component";
 
 const Contact = loadable(() => import("./pages/Contact"));
@@ -10,7 +10,7 @@ const Referals = loadable(() => import("./pages/Referals"));
 
 const App = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path='/' exact element={<Home />} />
         <Route path='/portfolio' exact element={<Portfolio />} />
@@ -18,7 +18,7 @@ const App = () => {
         <Route path='/contact' exact element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

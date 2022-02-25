@@ -8,7 +8,7 @@ const TabBar = loadable(() => import('../components/TabBar'));
 const Contact = () => {
  return (
   <div className='contact'>
-   <AppBar />
+   <AppBar title="Contact"/>
    <main className='contact-body'>
     <h1>Besoin d'une développeuse Front-End ?</h1>
     <h2>N'hésitez pas à me contacter</h2>

@@ -9,7 +9,7 @@ const About = loadable(() => import('../components/About'));
 const Home = () => {
  return (
   <div className='home'>
-   <AppBar />
+   <AppBar title="Accueil"/>
    <main>
    <Photo />
    <About />

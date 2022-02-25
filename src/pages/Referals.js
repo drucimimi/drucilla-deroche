@@ -7,7 +7,7 @@ const TabBar = loadable(() => import('../components/TabBar'));
 const Referals = () => {
  return (
   <div className='referals'>
-   <AppBar />
+   <AppBar title = "Références"/>
     <main id="slideReferals" class="carousel slide" data-bs-ride="carousel">
      <div class="carousel-indicators">
        <button type="button" data-bs-target="#slideReferals" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Ref 1"></button>
