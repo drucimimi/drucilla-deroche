@@ -15,6 +15,11 @@
      font-style: italic;
      color: $main-color;
     }
+    @media (min-width: 581px){
+     .title{
+      font-size: large;
+     }
+    }
     p{
      font-weight: bold;
      color: $text-color;
