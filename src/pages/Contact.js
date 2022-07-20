@@ -10,7 +10,7 @@ const Contact = () => {
   <div className='contact'>
    <AppBar title="Contact"/>
    <main className='contact-body'>
-    <h1>Besoin d'une développeuse Front-End ?</h1>
+    <h1>Besoin d'une développeuse Salesforce ?</h1>
     <h2>N'hésitez pas à me contacter</h2>
     <hr></hr>
     <div className='social-menu row'>

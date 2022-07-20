@@ -43,7 +43,7 @@ const Portfolio = () => {
     <AppBar title="Portfolio"/>
     <main className='container projects'>
       <p>Le code source de chaque projet ci-dessous est accessible sur mon <a href="https://github.com/drucimimi" target="_blank" rel='noreferrer'>Github</a></p>
-     <div className='row'>
+     <div className='list-projects'>
       {projects.map( (project) => <Project project={project} key={project.name} />)}
      </div>
     </main>

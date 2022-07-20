@@ -12,8 +12,8 @@ const TabBar = () => {
     <FaBook size={24}/> Portfolio
      </NavLink>
      <div className="dropdown">
-        <button id="plus" className="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          <FaEllipsisV size={24}/> Plus
+        <button id="plus" className="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => {  document.querySelector('.dropdown-menu').classList.toggle('show') }}>
+          <FaEllipsisV size={24} /> Plus
         </button>
         <div className="dropdown-menu" aria-labelledby="plus">
           <NavLink className="dropdown-item" to="/referals" activeClassName='active'>

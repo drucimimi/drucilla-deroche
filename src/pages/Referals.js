@@ -1,16 +1,87 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import loadable from '@loadable/component';
 
 const AppBar = loadable(() => import('../components/AppBar'));
 const TabBar = loadable(() => import('../components/TabBar'));
 
 const Referals = () => {
+  useEffect(() => {
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const nextBtn = document.querySelector('.carousel-control-next');
+    const prevBtn = document.querySelector('.carousel-control-prev');
+    const carouselIndicators = document.querySelectorAll('.carousel-indicators button');
+    let index = 0;
+
+    const changeActiveCarouselIndicator = () => {
+      for(let i=0; i< carouselIndicators.length; i++){
+        if(parseInt(carouselIndicators[i].getAttribute('data-bs-slide-to')) === index){
+            carouselIndicators[i].classList.add('active-indicator');
+        } else {
+            carouselIndicators[i].classList.remove('active-indicator');   
+        }
+      }
+    }
+
+    const goToNextSlide = () => {
+      if(index < 2){
+          carouselItems[index].classList.remove('active');
+          index++;
+          carouselItems[index].classList.add('active');
+      }
+      else if(index === 2){
+          carouselItems[index].classList.remove('active');
+          index = 0;
+          carouselItems[index].classList.add('active');
+      }
+      changeActiveCarouselIndicator();
+    }
+
+    const goToPrevSlide = () => {
+      if(index > 0){
+          carouselItems[index].classList.remove('active');
+          index--;
+          carouselItems[index].classList.add('active');
+      }
+      else if(index === 0){
+          carouselItems[index].classList.remove('active');
+          index = 2;
+          carouselItems[index].classList.add('active');
+      }
+      changeActiveCarouselIndicator();
+    }
+
+    const goToSlide = (commande) => {
+      commande.addEventListener('click', () => {
+          if(commande === nextBtn){
+              goToNextSlide();
+          }
+
+          else if(commande === prevBtn){
+              goToPrevSlide();
+          }
+          
+      })
+    }
+    goToSlide(nextBtn);
+    goToSlide(prevBtn);
+
+    const keyPressed = (e) => {
+      if(e.keyCode === 37){ // touche flèche gauche
+          goToPrevSlide();
+      }
+      else if(e.keyCode === 39){ // touche flèche droite
+          goToNextSlide();
+      }
+    }
+    document.addEventListener('keydown', keyPressed);
+  }, []);
+
  return (
   <div className='referals'>
    <AppBar title = "Références"/>
     <main id="slideReferals" class="carousel slide" data-bs-ride="carousel">
      <div class="carousel-indicators">
-       <button type="button" data-bs-target="#slideReferals" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Ref 1"></button>
+       <button type="button" data-bs-target="#slideReferals" data-bs-slide-to="0" class="active-indicator" aria-current="true" aria-label="Ref 1"></button>
        <button type="button" data-bs-target="#slideReferals" data-bs-slide-to="1" aria-label="Ref 2"></button>
        <button type="button" data-bs-target="#slideReferals" data-bs-slide-to="2" aria-label="Ref 3"></button>
      </div>

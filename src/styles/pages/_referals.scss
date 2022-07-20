@@ -1,38 +1,150 @@
 .referals{
- .carousel {
-  .carousel-indicators{
-   bottom: 0;
-   z-index: unset;
-   [data-bs-target] {
-    background-color: $text-color;
-   }
-  }
-  .carousel-item {
-   height: 22rem;
-   .carousel-caption {
-    .title{
-     font-size: 12px;
-     font-style: italic;
-     color: $main-color;
+    .carousel {
+        position: relative;
+        .carousel-indicators{
+            bottom: 0;
+            z-index: unset;
+            position: absolute;
+            right: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin-right: 15%;
+            margin-bottom: 1rem;
+            margin-left: 15%;
+            list-style: none;
+            [data-bs-target] {
+                background-color: $text-color;
+                box-sizing: content-box;
+                flex: 0 1 auto;
+                width: 30px;
+                height: 3px;
+                padding: 0;
+                margin-right: 3px;
+                margin-left: 3px;
+                text-indent: -999px;
+                cursor: pointer;
+                background-clip: padding-box;
+                border: 0;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                opacity: .5;
+                transition: opacity .6s ease;
+            }
+            .active-indicator{
+                opacity: 1;
+            }
+            button{
+                text-transform: none;
+                margin: 0;
+                font-family: inherit;
+                font-size: inherit;
+                line-height: inherit;
+                border-radius: 0;
+            }
+        }
+        .carousel-inner{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            .carousel-item {
+                height: 22rem;
+                position: relative;
+                display: none;
+                float: left;
+                width: 100%;
+                margin-right: -100%;
+                backface-visibility: hidden;
+                transition: transform .6s ease-in-out;
+                &.active{
+                    display: block;
+                }
+                .carousel-caption {
+                    position: absolute;
+                    right: 15%;
+                    bottom: 1.25rem;
+                    left: 15%;
+                    padding-top: 1.25rem;
+                    padding-bottom: 1.25rem;
+                    color: #fff;
+                    text-align: center;
+                    .title{
+                        font-size: 12px;
+                        font-style: italic;
+                        color: $main-color;
+                    }
+                    @media (min-width: 581px){
+                        .title{
+                            font-size: large;
+                        }
+                    }
+                    p{
+                        font-weight: bold;
+                        color: $text-color;
+                        margin-top: 0;
+                        margin-bottom: 1rem;
+                    }
+                }
+                .d-block{
+                    display: block !important;
+                }
+            }
+        }
+        .carousel-control-prev{
+            left: 0;
+        }
+        .carousel-control-next{
+            right: 0;
+        }
+        .carousel-control-prev, .carousel-control-next{
+            opacity: unset;
+            top: 50% !important;
+            z-index: unset;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 15%;
+            padding: 0;
+            text-align: center;
+            background: 0 0;
+            border: 0;
+            transition: opacity .15s ease;
+            text-transform: none;
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            border-radius: 0;
+            -webkit-appearance: button;
+        }
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+        }
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+        .carousel-control-prev-icon, .carousel-control-next-icon{
+            filter: invert(31%) sepia(8%) saturate(6500%) hue-rotate(77deg) brightness(98%) contrast(80%);
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: 100% 100%;
+        }
+        .visually-hidden, .visually-hidden-focusable:not(:focus):not(:focus-within) {
+            position: absolute!important;
+            width: 1px!important;
+            height: 1px!important;
+            padding: 0!important;
+            margin: -1px!important;
+            overflow: hidden!important;
+            clip: rect(0,0,0,0)!important;
+            white-space: nowrap!important;
+            border: 0!important;
+        }
     }
-    @media (min-width: 581px){
-     .title{
-      font-size: large;
-     }
-    }
-    p{
-     font-weight: bold;
-     color: $text-color;
-    }
-   }
-  }
-  .carousel-control-prev, .carousel-control-next{
-   opacity: unset;
-   top: 50% !important;
-   z-index: unset;
-  }
-  .carousel-control-prev-icon, .carousel-control-next-icon{
-   filter: invert(31%) sepia(8%) saturate(6500%) hue-rotate(77deg) brightness(98%) contrast(80%);
-  }
- }
 }
