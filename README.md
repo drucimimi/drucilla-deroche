@@ -56,9 +56,9 @@ Pour lancer le projet en local, lancer la commande `npm start` depuis votre term
 [NPM](https://nodejs.org/en/download/)
 
 ## Versions
-Dernière version stable : 1.3.1
+Dernière version stable : 1.3.2
 
-Dernière version : 1.3.1
+Dernière version : 1.3.2
 
 Liste des versions : [Cliquer pour afficher](https://github.com/drucimimi/cv/tags)
 

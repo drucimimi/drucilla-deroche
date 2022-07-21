@@ -13,7 +13,7 @@ const Contact = () => {
     <h1>Besoin d'une développeuse Salesforce ?</h1>
     <h2>N'hésitez pas à me contacter</h2>
     <hr></hr>
-    <div className='social-menu row'>
+    <div className='social-menu'>
      <div className='col-12 col-md-6'>
      <a className='social-icon' href='mailto:drucilladeroche@protonmail.com' target="_blank" rel='noreferrer'><FaEnvelope size={24} /></a>
      <h3>Adresse mail</h3>
