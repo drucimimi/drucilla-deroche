@@ -112,14 +112,14 @@ function AppHeader() {
 							: 'hidden'
 					}
 				>
-					<div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
-						<Link href="/projects" aria-label="Projects">
-							Projects
+					<div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+						<Link href="/about" aria-label="À propos">
+							À propos
 						</Link>
 					</div>
-					<div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-						<Link href="/about" aria-label="About Me">
-							About Me
+					<div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
+						<Link href="/projects" aria-label="Projets">
+							Projets
 						</Link>
 					</div>
 					<div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
@@ -142,17 +142,16 @@ function AppHeader() {
 				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
 					<div
 						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-						aria-label="Projects"
+						aria-label="À propos"
 					>
-						<Link href="/projects">Projects</Link>
+						<Link href="/about">À propos</Link>
 					</div>
 					<div
 						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-						aria-label="About Me"
+						aria-label="Projets"
 					>
-						<Link href="/about">About Me</Link>
+						<Link href="/projects">Projets</Link>
 					</div>
-
 					<div
 						className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
 						aria-label="Contact"
@@ -167,9 +166,9 @@ function AppHeader() {
 						<button
 							onClick={showHireMeModal}
 							className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
-							aria-label="Hire Me Button"
+							aria-label="Embauchez-moi"
 						>
-							Hire Me
+							Embauchez-moi
 						</button>
 					</div>
 

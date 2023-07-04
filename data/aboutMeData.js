@@ -3,10 +3,14 @@ import { v4 as uuidv4 } from 'uuid';
 export const aboutMeData = [
 	{
 		id: uuidv4(),
-		bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+		bio: 'Après 3 ans dans le domaine de l\'administration système et réseau informatique, j\'ai décidé de m\'auto-former en développement web.'
 	},
 	{
 		id: uuidv4(),
-		bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+		bio: 'Durant cette autoformation, j\'ai réalisé des sites web avec différents langages de programmation. En parallèle, j\'ai réalisé des stages d\'immerson pour confirmer mon projet de devenir développeuse web.',
+	},
+	{
+		id: uuidv4(),
+		bio: 'Enfin, j\'ai fait une POEI Développeuse Salesforce chez Webforce3 qui m\'a permis de débuter ma carrière de développeuse web chez Accenture.',
 	},
 ];

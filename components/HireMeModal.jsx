@@ -3,10 +3,10 @@ import { FiX } from 'react-icons/fi';
 import Button from './reusable/Button';
 
 const selectOptions = [
-	'Web Application',
-	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
+	'FrontEnd',
+	'FrontEnd JS',
+	'FullStack JS',
+	'FullStack PHP',
 ];
 
 function HireMeModal({ onClose, onRequest }) {
@@ -26,7 +26,7 @@ function HireMeModal({ onClose, onRequest }) {
 					<div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">
 						<div className="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
 							<h5 className=" text-primary-dark dark:text-primary-light text-xl">
-								What project are you looking for?
+								Quel projet recherchez-vous ?
 							</h5>
 							<button
 								onClick={onClose}
@@ -49,8 +49,8 @@ function HireMeModal({ onClose, onRequest }) {
 										name="name"
 										type="text"
 										required
-										placeholder="Name"
-										aria-label="Name"
+										placeholder="Nom"
+										aria-label="Nom"
 									/>
 								</div>
 								<div className="mt-6">
@@ -71,7 +71,7 @@ function HireMeModal({ onClose, onRequest }) {
 										name="subject"
 										type="text"
 										required
-										aria-label="Project Category"
+										aria-label="Catégorie de projet"
 									>
 										{selectOptions.map((option) => (
 											<option
@@ -92,7 +92,7 @@ function HireMeModal({ onClose, onRequest }) {
 										cols="14"
 										rows="6"
 										aria-label="Details"
-										placeholder="Project description"
+										placeholder="Description du projet"
 									></textarea>
 								</div>
 
@@ -109,9 +109,9 @@ function HireMeModal({ onClose, onRequest }) {
 											hover:bg-indigo-600
 											rounded-md
 											focus:ring-1 focus:ring-indigo-900 duration-500"
-										aria-label="Submit Request"
+										aria-label="Soumettre la demande"
 									>
-										<Button title="Send Request" />
+										<Button title="Envoyer la demande" />
 									</span>
 								</div>
 							</form>
@@ -125,9 +125,9 @@ function HireMeModal({ onClose, onRequest }) {
 									py-2 bg-gray-600 text-primary-light hover:bg-ternary-dark dark:bg-gray-200 dark:text-secondary-dark dark:hover:bg-primary-light
 									rounded-md
 									focus:ring-1 focus:ring-indigo-900 duration-500"
-								aria-label="Close Modal"
+								aria-label="Fermer le modal"
 							>
-								<Button title="Close" />
+								<Button title="Fermer" />
 							</span>
 						</div>
 					</div>
