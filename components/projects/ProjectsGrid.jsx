@@ -5,20 +5,20 @@ import { projectsData } from '../../data/projectsData';
 import ProjectsFilter from './ProjectsFilter';
 
 function ProjectsGrid() {
-	const [searchProject, setSearchProject] = useState();
+	const [searchProject, setSearchProject] = useState('');
 	const [selectProject, setSelectProject] = useState();
 
-	// @todo - To be fixed
-	// const searchProjectsByTitle = projectsData.filter((item) => {
-	// 	const result = item.title
-	// 		.toLowerCase()
-	// 		.includes(searchProject.toLowerCase())
-	// 		? item
-	// 		: searchProject == ''
-	// 		? item
-	// 		: '';
-	// 	return result;
-	// });
+	 const searchProjectsByTitle = projectsData.filter((item) => {
+	 	const result = item.title
+	 		.toLowerCase()
+	 		.includes(searchProject.toLowerCase())
+	 		? item
+	 		: searchProject == ''
+	 		? item
+	 		: '';
+	 	return result;
+	});
+	 console.log(searchProjectsByTitle)
 
 	const selectProjectsByCategory = projectsData.filter((item) => {
 		let category =
@@ -99,6 +99,7 @@ function ProjectsGrid() {
 							required=""
 							placeholder="Rechercher un projet"
 							aria-label="Name"
+							value={searchProject}
 						/>
 					</div>
 
@@ -107,7 +108,11 @@ function ProjectsGrid() {
 			</div>
 
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-5">
-				{selectProject
+				{searchProject
+					? searchProjectsByTitle.map((project, index) => {
+						return <ProjectSingle key={index} {...project} />
+					})
+				    : selectProject
 					? selectProjectsByCategory.map((project, index) => {
 							return <ProjectSingle key={index} {...project} />;
 					  })
