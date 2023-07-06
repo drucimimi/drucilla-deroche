@@ -1,19 +1,11 @@
 import { v4 as uuidv4 } from 'uuid';
-import {
-	FiFacebook,
-	FiInstagram,
-	FiLinkedin,
-	FiTwitter,
-	FiYoutube,
-} from 'react-icons/fi';
-
 export const projectsData = [
 	{
 		id: 1,
 		title: 'Recipes App',
 		url: 'https://recipes-app.webapps24.eu',
 		category: 'FullStack JS',
-		img: '/images/web-project-2.jpg',
+		img: '/images/web-project-2.png',
 		ProjectHeader: {
 			title: 'Recipes App',
 			publishDate: '12 juin 2023',
@@ -22,23 +14,8 @@ export const projectsData = [
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/ui-project-1.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/web-project-1.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
+				title: 'Recipes App',
 				img: '/images/web-project-2.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/web-project-3.png',
 			},
 		],
 		ProjectInfo: {
@@ -62,33 +39,6 @@ export const projectsData = [
 					],
 				},
 			],
-			SocialSharingHeading: 'Partager le projet',
-			SocialSharing: [
-			 	{
-			 		id: uuidv4(),
-			 		name: 'Twitter',
-			 		icon: <FiTwitter />,
-			 		url: 'https://twitter.com/',
-			 	},
-			 	{
-			 		id: uuidv4(),
-			 		name: 'Instagram',
-			 		icon: <FiInstagram />,
-			 		url: 'https://instagram.com/',
-			 	},
-			 	{
-			 		id: uuidv4(),
-			 		name: 'Facebook',
-			 		icon: <FiFacebook />,
-			 		url: 'https://facebook.com/',
-			 	},
-			 	{
-			 		id: uuidv4(),
-			 		name: 'LinkedIn',
-			 		icon: <FiLinkedin />,
-			 		url: 'https://linkedin.com/',
-			 	},
-			 ],
 		},
 	},
 	{
@@ -105,22 +55,7 @@ export const projectsData = [
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/ui-project-1.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/web-project-1.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/web-project-2.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
+				title: 'RAS YLANG',
 				img: '/images/web-project-3.png',
 			},
 		],
@@ -144,33 +79,6 @@ export const projectsData = [
 					],
 				},
 			],
-			SocialSharingHeading: 'Partager le projet',
-			SocialSharing: [
-				{
-					id: uuidv4(),
-					name: 'Twitter',
-					icon: <FiTwitter />,
-					url: 'https://twitter.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'Instagram',
-					icon: <FiInstagram />,
-					url: 'https://instagram.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'Facebook',
-					icon: <FiFacebook />,
-					url: 'https://facebook.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'LinkedIn',
-					icon: <FiLinkedin />,
-					url: 'https://linkedin.com/',
-				},
-			],
 		},
 	},
 	{
@@ -187,23 +95,8 @@ export const projectsData = [
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/ui-project-1.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
+				title: 'Jeu du Serpent',
 				img: '/images/web-project-1.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/web-project-2.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/web-project-3.png',
 			},
 		],
 		ProjectInfo: {
@@ -224,33 +117,6 @@ export const projectsData = [
 					],
 				},
 			],
-			SocialSharingHeading: 'Partager le projet',
-			SocialSharing: [
-				{
-					id: uuidv4(),
-					name: 'Twitter',
-					icon: <FiTwitter />,
-					url: 'https://twitter.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'Instagram',
-					icon: <FiInstagram />,
-					url: 'https://instagram.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'Facebook',
-					icon: <FiFacebook />,
-					url: 'https://facebook.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'LinkedIn',
-					icon: <FiLinkedin />,
-					url: 'https://linkedin.com/',
-				},
-			],
 		},
 	},
 	{
@@ -267,22 +133,7 @@ export const projectsData = [
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/ui-project-1.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/web-project-1.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/web-project-2.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
+				title: 'Site vitrine d\'un fast-food',
 				img: '/images/web-project-3.png',
 			},
 		],
@@ -307,33 +158,6 @@ export const projectsData = [
 					],
 				},
 			],
-			SocialSharingHeading: 'Partager le projet',
-			SocialSharing: [
-				{
-					id: uuidv4(),
-					name: 'Twitter',
-					icon: <FiTwitter />,
-					url: 'https://twitter.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'Instagram',
-					icon: <FiInstagram />,
-					url: 'https://instagram.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'Facebook',
-					icon: <FiFacebook />,
-					url: 'https://facebook.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'LinkedIn',
-					icon: <FiLinkedin />,
-					url: 'https://linkedin.com/',
-				},
-			],
 		},
 	},
 	{
@@ -350,23 +174,8 @@ export const projectsData = [
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/ui-project-1.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
+				title: 'Top 5 des meilleures actrices de télénovelas',
 				img: '/images/web-project-1.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/web-project-2.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/web-project-3.png',
 			},
 		],
 		ProjectInfo: {
@@ -387,33 +196,6 @@ export const projectsData = [
 					],
 				},
 			],
-			SocialSharingHeading: 'Share This',
-			SocialSharing: [
-				{
-					id: uuidv4(),
-					name: 'Twitter',
-					icon: <FiTwitter />,
-					url: 'https://twitter.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'Instagram',
-					icon: <FiInstagram />,
-					url: 'https://instagram.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'Facebook',
-					icon: <FiFacebook />,
-					url: 'https://facebook.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'LinkedIn',
-					icon: <FiLinkedin />,
-					url: 'https://linkedin.com/',
-				},
-			],
 		},
 	},
 	{
@@ -431,22 +213,7 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/ui-project-1.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/web-project-1.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/web-project-2.png',
-			},
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'une agence de voyages',
-				img: '/images/web-project-3.png',
+				img: '/images/ui-project.png',
 			},
 		],
 		ProjectInfo: {
@@ -464,33 +231,35 @@ export const projectsData = [
 					],
 				},
 			],
-			SocialSharingHeading: 'Partager le projet',
-			SocialSharing: [
-				{
-					id: uuidv4(),
-					name: 'Twitter',
-					icon: <FiTwitter />,
-					url: 'https://twitter.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'Instagram',
-					icon: <FiInstagram />,
-					url: 'https://instagram.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'Facebook',
-					icon: <FiFacebook />,
-					url: 'https://facebook.com/',
-				},
-				{
-					id: uuidv4(),
-					name: 'LinkedIn',
-					icon: <FiLinkedin />,
-					url: 'https://linkedin.com/',
-				},
-			],
 		},
 	},
 ];
+export const sharingOptions = {
+	SocialSharingHeading: 'Partager le projet',
+	SocialSharing: [
+		{
+			id: uuidv4(),
+			name: 'Twitter',
+			icon: '/images/BiTwitter.svg',
+			url: 'https://twitter.com/',
+		},
+		{
+			id: uuidv4(),
+			name: 'Instagram',
+			icon: '/images/BiInstagram.svg',
+			url: 'https://instagram.com/',
+		},
+		{
+			id: uuidv4(),
+			name: 'Facebook',
+			icon: '/images/BiFacebook.svg',
+			url: 'https://facebook.com/',
+		},
+		{
+			id: uuidv4(),
+			name: 'LinkedIn',
+			icon: '/images/BiLinkedin.svg',
+			url: 'https://linkedin.com/',
+		},
+	],
+}
