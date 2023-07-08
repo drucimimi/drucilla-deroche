@@ -234,32 +234,3 @@ export const projectsData = [
 		},
 	},
 ];
-export const sharingOptions = {
-	SocialSharingHeading: 'Partager le projet',
-	SocialSharing: [
-		{
-			id: uuidv4(),
-			name: 'Twitter',
-			icon: '/images/BiTwitter.svg',
-			url: 'https://twitter.com/',
-		},
-		{
-			id: uuidv4(),
-			name: 'Instagram',
-			icon: '/images/BiInstagram.svg',
-			url: 'https://instagram.com/',
-		},
-		{
-			id: uuidv4(),
-			name: 'Facebook',
-			icon: '/images/BiFacebook.svg',
-			url: 'https://facebook.com/',
-		},
-		{
-			id: uuidv4(),
-			name: 'LinkedIn',
-			icon: '/images/BiLinkedin.svg',
-			url: 'https://linkedin.com/',
-		},
-	],
-}

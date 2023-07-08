@@ -84,25 +84,18 @@ function ProjectSingle(props) {
 					{/* Single project social sharing */}
 					<div>
 						<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-							{sharingOptions.SocialSharingHeading}
+							Voir le projet
 						</p>
 						<div className="flex items-center gap-3 mt-5">
-							{sharingOptions.SocialSharing.map(
-								(social, index) => {
-									return <Link
-										key={index}
-										href={social.url}
-										target="__blank"
-										passHref={true}
-										aria-label="Partager le projet"
-										className="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500"
-									>
-										<span className="text-lg lg:text-2xl">
-											<Image src={social.icon} alt={social.name} />
-										</span>
-									</Link>;
-								}
-							)}
+							<Link
+								key={index}
+								href={props.project.url}
+								target="__blank"
+								passHref={true}
+								aria-label="Partager le projet"
+								className="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500"
+							>
+							</Link>;
 						</div>
 					</div>
 				</div>
