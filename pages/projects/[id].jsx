@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { FiClock, FiTag } from 'react-icons/fi';
 import PagesMetaHead from '../../components/PagesMetaHead';
-import { projectsData, sharingOptions } from '../../data/projectsData';
+import { projectsData} from '../../data/projectsData';
 import Link from "next/link";
 
 function ProjectSingle(props) {
@@ -83,25 +83,20 @@ function ProjectSingle(props) {
 
 					{/* Single project social sharing */}
 					<div>
-						<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-							Voir le projet
-						</p>
-						<div className="flex items-center gap-3 mt-5">
 							<Link
-								key={index}
 								href={props.project.url}
 								target="__blank"
 								passHref={true}
-								aria-label="Partager le projet"
-								className="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500"
+								aria-label="Voir le projet"
+								className="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500 mb-2"
 							>
-							</Link>;
-						</div>
+								Voir le projet
+							</Link>
 					</div>
 				</div>
 			</div>
 		</div>
-	);
+	)
 }
 
 export async function getServerSideProps({ query }) {

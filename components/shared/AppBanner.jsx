@@ -72,6 +72,8 @@ function AppBanner() {
 					layout="responsive"
 					src='/images/developer.jpg'
 					alt="Developer"
+					width="50"
+					height="50"
 				/>
 			</motion.div>
 		</motion.section>
