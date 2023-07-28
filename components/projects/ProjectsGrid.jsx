@@ -18,7 +18,6 @@ function ProjectsGrid() {
 	 		: '';
 	 	return result;
 	});
-	 console.log(searchProjectsByTitle)
 
 	const selectProjectsByCategory = projectsData.filter((item) => {
 		let category =
