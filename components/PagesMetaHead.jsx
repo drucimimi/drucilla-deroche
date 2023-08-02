@@ -17,7 +17,7 @@ function PagesMetaHead({ title, keywords, description }) {
 }
 
 PagesMetaHead.defaultProps = {
-	title: 'Next.js & TailwindCSS Portfolio Project',
+	title: 'Portfolio de Drucilla Deroche',
 	keywords: 'next.js, react, web, ui, portfolio, drucilla',
 };
 
