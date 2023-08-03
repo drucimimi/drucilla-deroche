@@ -1,9 +1,11 @@
 import {cvData} from "../data/cvData";
 import {FiArrowDownCircle} from "react-icons/fi";
 import {motion} from "framer-motion";
+import PagesMetaHead from "../components/PagesMetaHead";
 export default function CV() {
     return (
         <div>
+            <PagesMetaHead title="CV" />
             <div id="cv-page" className="container mx-auto mt-6">
                 <header className="bg-blue-900 p-4 text-white w-full">
                     <div className="flex justify-center">
@@ -83,7 +85,7 @@ export default function CV() {
                     </section>
                 </main>
                 <footer className="bg-blue-800 mt-4 p-2 w-full flex flex-col items-center gap-2 text-white">
-                    <h2 className="text-xl">Pour plus d'informations</h2>
+                    <h2 className="text-xl">Pour plus d&apos;informations</h2>
                     <div className="flex flex-col items-center">
                         <a href="tel:+33 6 41 33 80 12">{cvData.contactMe.tel}</a>
                         <a href="drucilladeroche@protonmail.com">{cvData.contactMe.email}</a>
