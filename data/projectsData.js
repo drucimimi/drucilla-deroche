@@ -121,47 +121,6 @@ export const projectsData = [
 	},
 	{
 		id: 4,
-		title: 'Site vitrine d\'un fast food',
-		url: 'https://burger-code.42web.io',
-		category: 'FullStack PHP',
-		img: '/images/web-project-3.png',
-		ProjectHeader: {
-			title: 'Site vitrine d\'un fast food',
-			publishDate: '16 février 2022',
-			tags: 'FullStack Application',
-		},
-		ProjectImages: [
-			{
-				id: uuidv4(),
-				title: 'Site vitrine d\'un fast-food',
-				img: '/images/web-project-3.png',
-			},
-		],
-		ProjectInfo: {
-			ProjectDetailsHeading: 'A propos du projet',
-			ObjectivesHeading: 'Objectif',
-			ObjectivesDetails:
-				'Améliorer la visibilité du restaurant en faisant la promotion de son site vitrine',
-			Technologies: [
-				{
-					title: 'Outils & Languages',
-					techs: [
-						'HTML',
-						'CSS',
-						'JavaScript',
-						'jQuery',
-						'PHP',
-						'SQL',
-						'Bootstrap',
-						'Atom',
-						'Git/GitHub',
-					],
-				},
-			],
-		},
-	},
-	{
-		id: 5,
 		title: 'Top 5 des meilleures actrices de télénovelas',
 		url: 'https://drucimimi.github.io/top-actrices',
 		category: 'FrontEnd JS',
@@ -199,7 +158,7 @@ export const projectsData = [
 		},
 	},
 	{
-		id: 6,
+		id: 5,
 		title: 'Site vitrine d\'une agence de voyages',
 		url: 'https://drucimimi.github.io/voyage',
 		category: 'FrontEnd',
