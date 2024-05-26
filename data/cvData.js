@@ -4,7 +4,7 @@ import {FiGithub, FiLinkedin} from "react-icons/fi";
 
 export const cvData = {
     aboutMe: {
-       title: "Développeuse Salesforce",
+       title: "Développeuse Full Stack",
        description: `${aboutMeData[0].bio} \n ${aboutMeData[1].bio} \n ${aboutMeData[2].bio}`
     },
     softSkills: [
@@ -27,7 +27,7 @@ export const cvData = {
     workExperienceAndHardSkills: [
         {
             id: uuidv4(),
-            title: "Développeuse Salesforce",
+            title: "Développeuse Full Stack",
             enterprise: "Accenture",
             location: "Nantes",
             startDate: "mai 2022",
@@ -39,7 +39,7 @@ export const cvData = {
                 },
                 {
                     id: uuidv4(),
-                    name: "Tester les fonctionnalités de box internet"
+                    name: "DCI Group - Intégrer les données entre Salesforce et Workday"
                 }
             ],
             skills: "Object Manager, Lightning App Builder/Manager, Flow, SOQL/SOSL, SFDX, VisualForce, Aura Components, LWC, Apex, Omnistudio"
