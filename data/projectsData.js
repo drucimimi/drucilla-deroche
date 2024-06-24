@@ -4,7 +4,7 @@ export const projectsData = [
 		id: 1,
 		title: 'Recipes App',
 		url: 'https://recipes-app.webapps24.eu',
-		category: 'FullStack JS',
+		category: 'FullStack Application',
 		img: '/images/web-project-2.png',
 		ProjectHeader: {
 			title: 'Recipes App',
@@ -27,14 +27,16 @@ export const projectsData = [
 				{
 					title: 'Outils & Languages',
 					techs: [
-						'HTML',
-						'CSS',
-						'JavaScript',
-						'Express.js',
-						'Objection.js',
-						'knex',
+						'Next.js',
 						'TailwindCSS',
-						'PHPStorm',
+						'Bun',
+						'VSCode',
+						'Flutter',
+						'Dart',
+						'Android Studio',
+						'Spring Boot',
+						'API REST',
+						'IntelliJ IDEA CE',
 						'Git/GitHub',
 					],
 				},
@@ -75,7 +77,7 @@ export const projectsData = [
 						'SQL',
 						'Sass',
 						'PHPStorm',
-						'Git'
+						'Git/GitHub'
 					],
 				},
 			],
@@ -121,44 +123,6 @@ export const projectsData = [
 	},
 	{
 		id: 4,
-		title: 'Top 5 des meilleures actrices de télénovelas',
-		url: 'https://drucimimi.github.io/top-actrices',
-		category: 'FrontEnd JS',
-		img: '/images/web-project-1.png',
-		ProjectHeader: {
-			title: 'Top 5 des meilleures actrices de télénovelas',
-			publishDate: '5 Fév 2021',
-			tags: 'Frontend Application',
-		},
-		ProjectImages: [
-			{
-				id: uuidv4(),
-				title: 'Top 5 des meilleures actrices de télénovelas',
-				img: '/images/web-project-1.png',
-			},
-		],
-		ProjectInfo: {
-			ProjectDetailsHeading: 'A propos du projet',
-			ObjectivesHeading: 'Objectif',
-			ObjectivesDetails:
-				'Donner mon avis sur le top 5 des actrices de télénovelas en précisant les meilleures séries',
-			Technologies: [
-				{
-					title: 'Outils & Languages',
-					techs: [
-						'HTML',
-						'CSS',
-						'JavaScript',
-						'jQuery',
-						'Bootstrap',
-						'Atom',
-					],
-				},
-			],
-		},
-	},
-	{
-		id: 5,
 		title: 'Site vitrine d\'une agence de voyages',
 		url: 'https://drucimimi.github.io/voyage',
 		category: 'FrontEnd',
