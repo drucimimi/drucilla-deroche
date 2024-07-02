@@ -5,7 +5,7 @@ export const aboutMeData = [
 		id: uuidv4(),
 		bio: 'Développeuse Full Stack depuis 2 ans chez Accenture, j\'ai pu monter en compétences sur le développement web en général.',
 	},
-		{
+	{
 		id: uuidv4(),
 		bio: 'Actuellement, je me spécialise sur le développement front d\'applications web.',
 	},
