@@ -5,7 +5,7 @@ import {FiGithub, FiLinkedin} from "react-icons/fi";
 export const cvData = {
     aboutMe: {
        title: "Développeuse Full Stack",
-       description: `${aboutMeData[0].bio} \n ${aboutMeData[1].bio} \n ${aboutMeData[2].bio}`
+       description: `${aboutMeData[0].bio}`
     },
     softSkills: [
         {
