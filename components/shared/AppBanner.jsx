@@ -38,7 +38,7 @@ function AppBanner() {
 					}}
 					className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
 				>
-					Développeuse Salesforce chez Accenture
+					Développeuse Full-Stack chez Accenture
 				</motion.p>
 				<div className="flex justify-center sm:block">
 					<Link
