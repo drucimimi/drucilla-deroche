@@ -40,6 +40,10 @@ export const cvData = {
                 {
                     id: uuidv4(),
                     name: "DCI Group - Intégrer les données entre Salesforce et Workday"
+                },
+                {
+                    id: uuidv4(),
+                    name: "Enedis - Développer l'interface utilisateur d'une application interne."
                 }
             ],
             skills: "Object Manager, Lightning App Builder/Manager, Flow, SOQL/SOSL, SFDX, VisualForce, Aura Components, LWC, Apex, Omnistudio"
@@ -119,24 +123,6 @@ export const cvData = {
             location: "Guadeloupe",
             startDate: "septembre 2016",
             endDate: "juin 2018"
-        }
-    ],
-    certifications:[
-        {
-            id: uuidv4(),
-            title: "/images/certified-platform-developer-1.png"
-        },
-        {
-            id: uuidv4(),
-            title: "/images/certified-javascript-developer-1.png"
-        },
-        {
-            id: uuidv4(),
-            title: "/images/certified-omnistudio-developer.png"
-        },
-        {
-            id: uuidv4(),
-            title: "/images/certified-associate.png"
         }
     ],
     contactMe: {
