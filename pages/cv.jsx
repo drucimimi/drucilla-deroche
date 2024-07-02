@@ -71,18 +71,6 @@ export default function CV() {
                             </p>
                         ))}
                     </section>
-                    <section id="certifications" className="m-2">
-                        <h2 className="text-xl underline underline-offset-2 mb-2">Certifications</h2>
-                        {cvData.certifications.map( (certification) => (
-                            <img
-                                key={certification.id}
-                                src={certification.title}
-                                width={75}
-                                height={75}
-                                className="inline mx-2"
-                            />
-                        ))}
-                    </section>
                 </main>
                 <footer className="bg-blue-800 mt-4 p-2 w-full flex flex-col items-center gap-2 text-white">
                     <h2 className="text-xl">Pour plus d&apos;informations</h2>
