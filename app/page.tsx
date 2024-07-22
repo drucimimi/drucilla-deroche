@@ -7,7 +7,7 @@ export default function Home() {
     <>
     <Navbar />
     <main className="flex flex-col px-3 py-2 gap-6 my-10">
-      <Hero />
+      <Hero/>
     </main>
     <Footer />
     </>
