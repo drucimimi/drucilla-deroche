@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio de Drucilla Deroche
+Ce site web qui comprend ma présentation, mes projets, mes expériences professionnelles ainsi que mes compétences.
 
-## Getting Started
+## Pour commencer
 
-First, run the development server:
+1-Installer l'IDE choisi
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2-Choisir un hébergeur de sites Nodejs gratuit
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3-Créer l'architecture de l'application
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4-Installer et configurer git
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+5-Installer Bun et les dépendances du projet via la commande `bun install`
 
-## Learn More
+6-Constuire l'application via la commande `bun run build`
 
-To learn more about Next.js, take a look at the following resources:
+7-Publier l'application
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Pré-requis
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Un outil de maquettage de sites web
+- Un IDE
+- Un navigateur web
+- Un hébergeur de site web
 
-## Deploy on Vercel
+### Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Si vous souhaitez voir le site en ligne, sautez cette étape.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Sinon, télécharger le projet via Github ou en ligne de commande: `git clone https://github.com/drucimimi/drucilla-deroche.git`
+
+## Démarrage
+
+Pour lancer le projet en ligne, cliquez sur le lien suivannt: https://drucilla-deroche.vercel.app
+
+Pour lancer le projet en local, lancer la commande `bun run dev`
+
+## Fabriqué avec
+
+* [VSCode](https://code.visualstudio.com) - Editeur de développement intégré (IDE)
+* [Bun](https://bun.sh) - Package manager
+* [NextJS](https://nextjs.org) - Framework Front-End JS
+* [TailwindCSS](https://tailwindcss.com/) - Framework CSS
+
+## Versions
+
+Dernière version stable : 2024.1.1
+
+Dernière version : 2024.1.1
+
+Liste des versions : [Cliquer pour afficher](https://github.com/drucimimi/drucilla-deroche/releases)
+
+## Auteurs
+Drucilla DEROCHE
