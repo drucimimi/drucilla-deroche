@@ -1,0 +1,11 @@
+.hero{
+    @apply flex flex-col items-center gap-2;
+}
+
+.heroProfileImage img{
+    @apply rounded-full;
+}
+
+.heroBrief{
+    @apply flex flex-col items-center text-xl gap-2;
+}
