@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Portfolio de Drucilla Deroche",
   description: "Comprend ma présentation, mes projets, mes expériences professionnelles ainsi que mes compétences",
+  icons: {
+    icon: '/images/favicon.ico',
+  },
 };
 
 export default function RootLayout({
