@@ -1,0 +1,9 @@
+.menu{
+    @apply bg-gray-800 fixed top-0 left-0 right-0;
+}
+.buttonMenu {
+    @apply flex justify-center md:hidden;
+}
+.menu ul{
+    @apply flex-col items-center md:flex-row md:justify-center gap-2;
+}
