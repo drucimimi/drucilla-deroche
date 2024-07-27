@@ -30,6 +30,16 @@ body {
     justify-content: space-between;
 }
 
+h1{
+  @apply text-2xl;
+}
+h2{
+  @apply text-xl;
+}
+p{
+  @apply text-lg;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

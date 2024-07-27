@@ -9,3 +9,7 @@
 .heroBrief{
     @apply flex flex-col items-center text-xl gap-2;
 }
+
+.heroSocialMediaMenu{
+    @apply flex justify-center gap-8;
+}
