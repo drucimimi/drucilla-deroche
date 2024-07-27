@@ -1,0 +1,15 @@
+.project{
+    @apply rounded-xl shadow-lg;
+}
+
+.projectHeader{
+    @apply flex w-52 h-52;
+}
+
+.projectBody{
+    @apply bg-green-400 p-2;
+}
+
+.projectFooter{
+    @apply bg-green-300 p-2 text-lg;
+}
