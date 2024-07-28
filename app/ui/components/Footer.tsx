@@ -1,4 +1,3 @@
-'use client'
 import * as React from 'react'
 import styles from '@/app/ui/styles/footer.module.css'
 import Icon from './icon'

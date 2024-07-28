@@ -1,4 +1,3 @@
-'use client'
 import Link from 'next/link'
 import * as React from 'react'
 import styles from '@/app/ui/styles/project.module.css'
