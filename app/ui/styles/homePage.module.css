@@ -1,0 +1,7 @@
+.homePage {
+  @apply flex flex-col px-3 py-2 gap-6 my-10;
+}
+
+.projects {
+    @apply flex flex-col items-center md:flex-row md:flex-wrap gap-2;
+}

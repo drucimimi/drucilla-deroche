@@ -1,15 +1,19 @@
 .project{
-    @apply rounded-xl shadow-lg;
+    @apply w-64 rounded overflow-hidden shadow-lg;
 }
 
 .projectHeader{
-    @apply flex w-52 h-52;
+    @apply w-full h-56 relative;
 }
 
 .projectBody{
-    @apply bg-green-400 p-2;
+    @apply bg-green-400 h-28 px-6 py-4;
 }
 
 .projectFooter{
-    @apply bg-green-300 p-2 text-lg;
+    @apply bg-green-300 text-lg px-6 pt-4 pb-2;
+}
+
+.projectFooter a{
+    @apply text-black dark:text-white;
 }

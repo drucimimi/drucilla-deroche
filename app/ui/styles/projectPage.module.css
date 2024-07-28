@@ -1,0 +1,24 @@
+.projectHeader{
+    @apply flex flex-col items-center gap-2 p-2 mt-10;
+}
+.projectMain{
+    @apply flex flex-col gap-4 p-4;
+}
+.projectDetails{
+    @apply flex flex-col gap-2;
+}
+.projectDetails h1{
+ @apply text-xl;
+}
+.projectDetails h2{
+    @apply text-lg;
+}
+.projectDetails p{
+    @apply text-sm;
+}
+.projectDetails ul{
+    @apply list-disc pl-4 text-sm;
+}
+.projectIssues ul{
+    @apply list-disc pl-4;
+}
