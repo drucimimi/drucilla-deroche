@@ -1,4 +1,4 @@
-import Footer from '@/app/ui/components/Footer'
+import Footer from '@/app/ui/_components/Footer'
 import Image from 'next/image'
 import * as React from 'react'
 import { Octokit } from "@octokit/rest"

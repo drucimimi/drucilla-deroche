@@ -1,6 +1,6 @@
-import Footer from "./ui/components/Footer"
-import Hero from "./ui/components/hero"
-import Project from '@/app/ui/components/project'
+import Footer from "./ui/_components/Footer"
+import Hero from "./ui/_components/hero"
+import Project from '@/app/ui/_components/project'
 import { Octokit } from "@octokit/rest"
 import styles from '@/app/ui/styles/homePage.module.css'
 
