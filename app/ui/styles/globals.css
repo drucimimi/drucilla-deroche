@@ -40,6 +40,10 @@ p{
   @apply text-lg;
 }
 
+a{
+  @apply text-green-200 hover:underline;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

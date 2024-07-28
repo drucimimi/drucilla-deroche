@@ -1,50 +1,78 @@
-'use client'
 import Footer from '@/app/ui/components/Footer'
-import Link from 'next/link'
 import Image from 'next/image'
 import * as React from 'react'
-import Skill from '@/app/ui/components/skill'
+import { Octokit } from "@octokit/rest"
+import ReactMarkdown from 'react-markdown'
+import { Project } from '@/app/lib/definitions'
+import styles from '@/app/ui/styles/projectPage.module.css'
 
-const Page : React.FunctionComponent = () => {
-  const issues = [{name:'Issue 1'},{name:'Issue 2'},{name:'Issue 3'}]
-  const skills = [{name:'HTML5'}, {name:'CSS3'}, {name:'TypeScript'}]
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 
+const ProjectPage = async ({params}: {params:{id:number}}) => {
+  let project
+  let messageError
+  let projectOpenIssues
+  const formatDateTime = (dateTime:string) : string => {
+    const date = dateTime.split("T")[0].split('-').reverse().join('-')
+    const time = dateTime.split("T")[1].split('Z')[0].replace(':','h').split(':')[0]
+    const newDateTime = `${date} à ${time}`
+    return newDateTime
+  }
+  try{
+    const response: Project = await octokit.graphql(`{
+        node(id: "${params.id}") {
+          ... on ProjectV2 {
+            id
+            title
+            shortDescription
+            closed
+            createdAt
+            updatedAt
+            readme
+            items(first: 10) {
+              nodes {
+                content {
+                  ... on Issue {
+                    id
+                    title
+                    state
+                  }
+                }
+              }
+            }
+          } 
+        }
+    }`, {
+      headers: {
+        'If-None-Match': ''
+      }})
+    project = response.node
+    projectOpenIssues = project && project!.items.nodes.filter( issue => issue.content.state === 'OPEN')
+  } catch (error){
+    messageError = "Erreur lors de la récupération des projets", error
+  }
   return (
     <>
-      <header className='flex flex-col items-center gap-2 p-2 mt-10'>
-        <Image src={'/images/default-project-image.jpg'} width={200} height={200} alt={'Project Image'}/>
-        <h1>Project Name</h1>
+      {project ? <><header className={styles.projectHeader}>
+        <Image src={project!.shortDescription.includes("http") ? project!.shortDescription.replace('![Image]', '').replace('(', '').replace(')', '') : '/images/default-project-image.jpg'} width={200} height={200} alt={project!.title}/>
+        <h1>{project!.title}</h1>
       </header>
-      <main className='flex flex-col gap-4 p-4'>
-        <section>
-          <p>Créé le Project Date Creation</p>
-          <p>Modifié le Project Date Update</p>
-          <p>Statut : Project Status</p>
-        </section>
-        <section>
-          <h2>Project Short Description</h2>
-          <p>Project Readme</p>
-        </section>
-        <section>
-          <h2>Project Pending Issues</h2>
-          <ul className='list-disc pl-4'>
-            {issues.map( issue => (
-              <li key={issue.name}>{issue.name}</li>
-            ))}
-          </ul>
-        </section>
-        <section>
-          <h2>Project Skills</h2>
-          <div className='flex gap-2 mt-2'>
-            {skills.map( skill => (
-              <Skill key={skill.name} name={skill.name} />
-            ))}
-          </div>
-        </section>
-        <Link href={'https://github.com/users/drucimimi/projects/<project-id>'}/>
-      </main>
+      <main className={styles.projectMain}><section>
+          <p>Créé le {formatDateTime(project!.createdAt)}</p>
+          <p>Modifié le {formatDateTime(project!.updatedAt)}</p>
+          <p>Statut : {project!.closed ? "Terminé" : "En cours"}</p>
+        </section><section className={styles.projectDetails}>
+            <ReactMarkdown>{project!.readme}</ReactMarkdown>
+          </section><section className={styles.projectIssues}>
+            <h2>Fonctionnalités en cours de développement</h2>
+            <ul>
+              {projectOpenIssues!.length > 0 ? projectOpenIssues!.map(issue => (
+                <li key={issue.content.id}>{issue.content.title}</li>
+              )) : <p>Aucune fonctionnalité en cours</p>}
+            </ul>
+          </section></main></> : <p>{messageError}</p>}
       <Footer />
     </>
   )
 }
-export default Page;
+export default ProjectPage
