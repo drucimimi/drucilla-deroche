@@ -4,7 +4,7 @@ import Project from '@/app/ui/_components/project'
 import { Octokit } from "@octokit/rest"
 import styles from '@/app/ui/styles/homePage.module.css'
 
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN, timeZone: "Europe/Paris" })
 
 export default async function Home() {
   let projects

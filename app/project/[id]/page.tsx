@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown'
 import { Project } from '@/app/lib/definitions'
 import styles from '@/app/ui/styles/projectPage.module.css'
 
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN , timeZone: "Europe/Paris" })
 
 const ProjectPage = async ({params}: {params:{id:number}}) => {
   let project
