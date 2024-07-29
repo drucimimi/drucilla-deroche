@@ -1,26 +1,15 @@
-import { Octokit } from "@octokit/rest"
-import { createAppAuth } from "@octokit/auth-app";
 import { graphql } from "@octokit/graphql";
+import { Project } from "../lib/definitions";
 
-/*const authOctokit = new Octokit({
-    authStrategy: createAppAuth,
-    auth: {
-        appId: 956783,
-        privateKey: process.env.PRIVATE_KEY||"",
-        clientId: 'Iv23liChYzh1YfdxqtPo',
-        clientSecret:'9f2b3028d547fa9e511898980ca6ebc881e167d9'
-    }
-})*/
 export default class Projects {
-    //static octokit = new Octokit({ auth: process.env.GITHUB_TOKEN, timeZone: "Europe/Paris" })
-    static async get(){
+    static graphqlWithAuth = graphql.defaults({
+        headers: {
+          authorization: `token ${process.env.GITHUB_TOKEN}`,
+        },
+      });
+    static async get_all(){
         try {
-            const graphqlWithAuth = graphql.defaults({
-                headers: {
-                  authorization: `token ${process.env.GITHUB_TOKEN}`,
-                },
-              });
-            const response : { viewer: { projectsV2: { nodes: [{id:number, title:string, shortDescription:string, closed:boolean}] } } } = await graphqlWithAuth(`{
+            const response : { viewer: { projectsV2: { nodes: [{id:number, title:string, shortDescription:string, closed:boolean}] } } } = await this.graphqlWithAuth(`{
               viewer {
                 projectsV2(first: 10, orderBy: {field: UPDATED_AT, direction: DESC}, query: "is:public") {
                   nodes {
@@ -38,6 +27,40 @@ export default class Projects {
               return {projects:response.viewer.projectsV2.nodes, messageError:null}
           } catch (error) {
             return {projects:null, messageError:JSON.stringify(error)}
+          }
+    }
+    static async get_by_id(id:number){
+        try{
+            const response : Project = await this.graphqlWithAuth(`{
+                node(id: "${id}") {
+                  ... on ProjectV2 {
+                    id
+                    title
+                    shortDescription
+                    closed
+                    createdAt
+                    updatedAt
+                    readme
+                    items(first: 10) {
+                      nodes {
+                        content {
+                          ... on Issue {
+                            id
+                            title
+                            state
+                          }
+                        }
+                      }
+                    }
+                  } 
+                }
+            }`, {
+              headers: {
+                'If-None-Match': ''
+              }})
+              return {project:response.node, messageError:null}
+          } catch (error){
+            return {project:null, messageError:'Un problème est survenu lors du chargement du projet'}
           }
     }
 }

@@ -1,56 +1,19 @@
 import Footer from '@/app/ui/_components/Footer'
 import Image from 'next/image'
 import * as React from 'react'
-import { Octokit } from "@octokit/rest"
 import ReactMarkdown from 'react-markdown'
-import { Project } from '@/app/lib/definitions'
 import styles from '@/app/ui/styles/projectPage.module.css'
-
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN , timeZone: "Europe/Paris" })
+import Projects from '@/app/actions/projects.action'
 
 const ProjectPage = async ({params}: {params:{id:number}}) => {
-  let project
-  let messageError
-  let projectOpenIssues
   const formatDateTime = (dateTime:string) : string => {
     const date = dateTime.split("T")[0].split('-').reverse().join('-')
     const time = dateTime.split("T")[1].split('Z')[0].replace(':','h').split(':')[0]
     const newDateTime = `${date} à ${time}`
     return newDateTime
   }
-  try{
-    const response: Project = await octokit.graphql(`{
-        node(id: "${params.id}") {
-          ... on ProjectV2 {
-            id
-            title
-            shortDescription
-            closed
-            createdAt
-            updatedAt
-            readme
-            items(first: 10) {
-              nodes {
-                content {
-                  ... on Issue {
-                    id
-                    title
-                    state
-                  }
-                }
-              }
-            }
-          } 
-        }
-    }`, {
-      headers: {
-        'If-None-Match': ''
-      }})
-    project = response.node
-    projectOpenIssues = project && project!.items.nodes.filter( issue => issue.content.state === 'OPEN')
-  } catch (error){
-    messageError = "Erreur lors de la récupération des projets", error
-  }
+  const {project, messageError} = await Projects.get_by_id(params.id);
+  const projectOpenIssues = project && project!.items.nodes.filter( issue => issue.content.state === 'OPEN')
   return (
     <>
       {project ? <><header className={styles.projectHeader}>
