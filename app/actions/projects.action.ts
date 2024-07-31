@@ -21,9 +21,9 @@ export default class Projects {
                 }
               }
             }`, {
-              headers: {
-                'If-None-Match': ''
-              }})
+              next: {
+                revalidate: 86400,
+              },})
               return {projects:response.viewer.projectsV2.nodes, messageError:null}
           } catch (error) {
             return {projects:null, messageError:JSON.stringify(error)}
@@ -55,8 +55,8 @@ export default class Projects {
                   } 
                 }
             }`, {
-              headers: {
-                'If-None-Match': ''
+              next: {
+                revalidate: 3600,
               }})
               return {project:response.node, messageError:null}
           } catch (error){
