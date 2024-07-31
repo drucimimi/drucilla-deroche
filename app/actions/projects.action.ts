@@ -11,7 +11,7 @@ export default class Projects {
         try {
             const response : { viewer: { projectsV2: { nodes: [{id:number, title:string, shortDescription:string, closed:boolean}] } } } = await this.graphqlWithAuth(`{
               viewer {
-                projectsV2(first: 10, orderBy: {field: UPDATED_AT, direction: DESC}, query: "is:public") {
+                projectsV2(first: 50, orderBy: {field: UPDATED_AT, direction: DESC}, query: "is:public") {
                   nodes {
                     id
                     title
@@ -22,7 +22,7 @@ export default class Projects {
               }
             }`, {
               next: {
-                revalidate: 86400,
+                revalidate: 3600,
               },})
               return {projects:response.viewer.projectsV2.nodes, messageError:null}
           } catch (error) {
@@ -41,7 +41,7 @@ export default class Projects {
                     createdAt
                     updatedAt
                     readme
-                    items(first: 10) {
+                    items{
                       nodes {
                         content {
                           ... on Issue {
@@ -56,7 +56,7 @@ export default class Projects {
                 }
             }`, {
               next: {
-                revalidate: 3600,
+                revalidate: 0,
               }})
               return {project:response.node, messageError:null}
           } catch (error){
