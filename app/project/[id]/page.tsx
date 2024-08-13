@@ -5,10 +5,13 @@ import ReactMarkdown from 'react-markdown'
 import styles from '@/app/ui/styles/projectPage.module.css'
 import Projects from '@/app/actions/projects.action'
 
+export const dynamic = "force-dynamic"
+
 const ProjectPage = async ({params}: {params:{id:number}}) => {
   const formatDateTime = (dateTime:string) : string => {
-    const date = dateTime.split("T")[0].split('-').reverse().join('-')
-    const time = dateTime.split("T")[1].split('Z')[0].replace(':','h').split(':')[0]
+    const dateTimeNoStr = new Date(dateTime).toLocaleString("fr-FR", {timeZone: "Europe/Paris"})
+    const date = dateTimeNoStr.split(" ")[0].split('-').reverse().join('-')
+    const time = dateTimeNoStr.split(" ")[1].replace(':','h').split(':')[0]
     const newDateTime = `${date} à ${time}`
     return newDateTime
   }

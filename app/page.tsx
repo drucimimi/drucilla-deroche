@@ -4,6 +4,8 @@ import Project from '@/app/ui/_components/project'
 import styles from '@/app/ui/styles/homePage.module.css'
 import Projects from "./actions/projects.action"
 
+export const dynamic = "force-dynamic"
+
 export default async function Home() {
   const {projects, messageError} = await Projects.get_all();
 
