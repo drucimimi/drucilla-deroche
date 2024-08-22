@@ -1,0 +1,7 @@
+.categories{
+    @apply self-end text-black p-2;
+}
+
+.projects {
+    @apply flex flex-col items-center md:flex-row md:flex-wrap gap-2;
+}

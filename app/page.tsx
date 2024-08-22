@@ -1,8 +1,8 @@
 import Footer from "./ui/_components/Footer"
 import Hero from "./ui/_components/hero"
-import Project from '@/app/ui/_components/project'
 import styles from '@/app/ui/styles/homePage.module.css'
 import Projects from "./actions/projects.action"
+import ProjectsData from "./ui/_components/projects"
 
 export const dynamic = "force-dynamic"
 
@@ -14,11 +14,7 @@ export default async function Home() {
     <main className={styles.homePage}>
       <Hero/>
       <h1>Liste des projets</h1>
-       { projects ? <div className={styles.projects}>
-          {projects.map( project => (
-              <Project key={project.id} id={project.id} name={project.title} cover={project.shortDescription} closed={project.closed}/>
-          ))}
-      </div> : <p>{messageError as any}</p>}
+      <ProjectsData projects={projects} messageError={messageError}/>
     </main>
     <Footer />
     </>

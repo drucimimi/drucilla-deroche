@@ -9,7 +9,7 @@ export default class Projects {
       });
     static async get_all(){
         try {
-            const response : { viewer: { projectsV2: { nodes: [{id:number, title:string, shortDescription:string, closed:boolean}] } } } = await this.graphqlWithAuth(`{
+            const response : { viewer: { projectsV2: { nodes: Array<{id:number, title:string, shortDescription:string, closed:boolean, readme:string}> } } } = await this.graphqlWithAuth(`{
               viewer {
                 projectsV2(first: 50, orderBy: {field: UPDATED_AT, direction: DESC}, query: "is:public") {
                   nodes {
@@ -17,6 +17,7 @@ export default class Projects {
                     title
                     shortDescription
                     closed
+                    readme
                   }
                 }
               }
