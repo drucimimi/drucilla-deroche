@@ -1,5 +1,5 @@
 .categories{
-    @apply self-end text-black p-2;
+    @apply self-end text-black p-2 outline-none;
 }
 
 .projects {
