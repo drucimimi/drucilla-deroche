@@ -9,7 +9,7 @@
 
 /*Image de présentation*/
 .hero p:first-child img{
-  @apply rounded-full;
+  @apply rounded-full w-full;
 }
 
 /* Titre de présentation*/
