@@ -1,3 +1,33 @@
 .homePage {
   @apply flex flex-col px-3 py-2 gap-6 my-10;
 }
+
+/* Bloc présentation */
+.hero{
+  @apply flex flex-col items-center gap-2;
+}
+
+/*Image de présentation*/
+.hero p:first-child img{
+  @apply rounded-full;
+}
+
+/* Titre de présentation*/
+.hero h1{
+  @apply flex flex-col items-center text-2xl gap-2;
+}
+
+/* Sous-titres de présentation */
+.hero h2 {
+  @apply text-xl;
+}
+
+/* Paragraphes de présentation */
+.hero p {
+  @apply text-lg;
+}
+
+/*Bloc médias sociaux*/
+.hero p:last-child {
+  @apply flex justify-center gap-8;
+}
