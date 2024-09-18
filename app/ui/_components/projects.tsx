@@ -3,6 +3,7 @@ import * as React from 'react'
 import styles from '@/app/ui/styles/projects.module.css'
 import { useState } from "react"
 import Project from './project'
+import { useI18n } from '@/locales/client'
 
 interface  ProjectsDataProps {
   projects:Array<{id:number, title:string, shortDescription:string, closed:boolean, readme:string}>|null 
@@ -10,15 +11,16 @@ interface  ProjectsDataProps {
 }
 
 const ProjectsData: React.FunctionComponent<ProjectsDataProps> = ({ projects, messageError}) => {
+  const translate = useI18n()
   const categoryProjects = [
-    'Tous les projets',
+    translate('project.mainCategory'),
     'Front-End',
     'FullStack',
     'Mobile'
   ]
   const [selectedCategory, setSelectedCategory] = useState(categoryProjects[0])
   const filteredProjects = projects?.filter(
-    (project:any) => selectedCategory != 'Tous les projets' ? project.readme.includes(selectedCategory) : project
+    (project:any) => selectedCategory != categoryProjects[0] ? project.readme.includes(selectedCategory) : project
   )
   return <>
   <select className={styles.categories} onChange={(e) => setSelectedCategory(e.target.value)}>
