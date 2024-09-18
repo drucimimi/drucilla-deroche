@@ -6,17 +6,31 @@ export default class About {
           authorization: `token ${process.env.GITHUB_TOKEN}`,
         },
       });
-      static async get() {
+      static async get(locale:string) {
             try {
-                const response : { repository : {object : {text : string|null}}} = await this.graphqlWithAuth(`{
-                repository(owner: "drucimimi", name: "drucimimi") {
-                    object(expression: "main:README.md") {
-                    ... on Blob {
-                        text
-                    }
-                    }
+                let response : { repository : {object : {text : string|null}}} 
+                if(locale === 'fr'){
+                    response  = await this.graphqlWithAuth(`{
+                        repository(owner: "drucimimi", name: "drucimimi") {
+                            object(expression: "main:README.md") {
+                            ... on Blob {
+                                text
+                            }
+                            }
+                        }
+                        }`)
+                } else {
+                    response  = await this.graphqlWithAuth(`{
+                        repository(owner: "drucimimi", name: "drucimimi") {
+                            object(expression: "main:README-en.md") {
+                            ... on Blob {
+                                text
+                            }
+                            }
+                        }
+                        }`)
                 }
-                }`)
+               
                 return {about:response.repository.object.text, messageError2:null}
                 
             } catch (error) {

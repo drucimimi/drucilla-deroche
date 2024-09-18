@@ -1,3 +1,6 @@
+.backToHome{
+    @apply ml-2 mt-2;
+}
 .projectHeader{
     @apply flex flex-col items-center gap-2 p-2 mt-10;
 }

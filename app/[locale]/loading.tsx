@@ -1,4 +1,4 @@
-import HandSpinner from "./ui/_components/handSpinner"
+import HandSpinner from "../ui/_components/handSpinner"
 
 const loading = ()=>{
     return (
