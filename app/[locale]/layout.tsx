@@ -1,10 +1,8 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "@/app/ui/styles/globals.css"
-import { I18nProviderClient } from '@/locales/client'
 import { Provider } from "../ui/_components/Provider";
 
-const inter = Inter({ subsets: ["latin"] });
+type Params = Promise<{ locale: string }>
 
 export const metadata: Metadata = {
   title: "Portfolio de Drucilla Deroche",
@@ -47,15 +45,20 @@ export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default function RootLayout({
-  params,
-  children,
-}: Readonly<{
-  params: { locale: string };
-  children: React.ReactNode
-}>) {
+export default async function RootLayout(
+  props: Readonly<{
+    params: Params;
+    children: React.ReactNode
+  }>
+) {
+  const params = await props.params
+
+  const {
+    children
+  } = props;
+
   return (
-    <html lang={params.locale}>
+    <html lang={params.locale} suppressHydrationWarning>
       <body>
         <Provider locale={params.locale}>
               {children}

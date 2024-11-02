@@ -7,10 +7,11 @@ import Projects from '@/app/actions/projects.action'
 import { getI18n } from '@/locales/server'
 import SwitchLanguage from '@/app/ui/_components/SwitchLanguage'
 import Link from 'next/link'
+import { setStaticParamsLocale } from 'next-international/server'
 
-export const dynamic = "force-dynamic"
-
-const ProjectPage = async ({params}: {params:{id:number, locale:string}}) => {
+const ProjectPage = async (props: {params: Promise<{id:number, locale:string}>}) => {
+  const {id, locale} = await props.params;
+  setStaticParamsLocale(locale)
   const translate = await getI18n()
   const formatDateTime = (dateTime:string) : string => {
     const dateTimeNoStr = new Date(dateTime).toLocaleString("fr-FR", {timeZone: "Europe/Paris"})
@@ -19,9 +20,9 @@ const ProjectPage = async ({params}: {params:{id:number, locale:string}}) => {
     const newDateTime = `${date} ${translate('project.at')} ${time}`
     return newDateTime
   }
-  const {project, messageError} = await Projects.get_by_id(params.id)
+  const {project, messageError} = await Projects.get_by_id(id)
   const projectOpenIssues = project && project!.items.nodes.filter( issue => issue.content.state === 'OPEN')
-  const readmeProject = params.locale === 'fr' ? project?.readme.split('-------------------------------------')[0] : project?.readme.split('-------------------------------------')[1]
+  const readmeProject = locale === 'fr' ? project?.readme.split('-------------------------------------')[0] : project?.readme.split('-------------------------------------')[1]
   return (
     <>
       <div className={styles.backToHome}>

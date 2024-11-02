@@ -6,12 +6,13 @@ import About from "../actions/about.action"
 import ReactMarkdown from "react-markdown"
 import { getI18n } from "@/locales/server"
 import SwitchLanguage from "../ui/_components/SwitchLanguage"
+import { setStaticParamsLocale } from "next-international/server"
 
-export const dynamic = "force-dynamic"
-
-export default async function Home({params}: {params:{locale:string}}) {
+export default async function Home(props: {params: Promise<{locale:string}>}) {
+  const {locale} = await props.params
+  setStaticParamsLocale(locale)
   const {projects, messageError} = await Projects.get_all()
-  const {about, messageError2} = await About.get(params.locale)
+  const {about, messageError2} = await About.get(locale)
 
   const translate = await getI18n()
 
