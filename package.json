@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cesnow/matomo-next": "^1.0.5",
     "@octokit/auth-app": "^7.1.1",
     "@octokit/graphql": "^8.1.1",
     "@octokit/rest": "^21.0.2",
