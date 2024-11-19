@@ -7,7 +7,6 @@ import ReactMarkdown from "react-markdown"
 import { getI18n } from "@/locales/server"
 import SwitchLanguage from "../ui/_components/SwitchLanguage"
 import { setStaticParamsLocale } from "next-international/server"
-import Matomo from "../ui/_components/matomo"
 
 
 export default async function Home(props: {params: Promise<{locale:string}>}) {
@@ -20,7 +19,6 @@ export default async function Home(props: {params: Promise<{locale:string}>}) {
 
   return (
     <>
-    <Matomo />
     <main className={styles.homePage}>
       <SwitchLanguage />
       <div className={styles.hero}>

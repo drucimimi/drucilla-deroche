@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import "@/app/ui/styles/globals.css"
 import { Provider } from "../ui/_components/Provider";
-import { MatomoProvider } from "@cesnow/matomo-next";
 
 type Params = Promise<{ locale: string }>
 
@@ -61,11 +60,9 @@ export default async function RootLayout(
   return (
     <html lang={params.locale} suppressHydrationWarning>
       <body>
-        <MatomoProvider>
           <Provider locale={params.locale}>
                 {children}
           </Provider>
-        </MatomoProvider>
       </body>
     </html>
   )

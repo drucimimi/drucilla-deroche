@@ -8,7 +8,6 @@ import { getI18n } from '@/locales/server'
 import SwitchLanguage from '@/app/ui/_components/SwitchLanguage'
 import Link from 'next/link'
 import { setStaticParamsLocale } from 'next-international/server'
-import Matomo from '@/app/ui/_components/matomo'
 
 const ProjectPage = async (props: {params: Promise<{id:number, locale:string}>}) => {
   const {id, locale} = await props.params;
@@ -26,7 +25,6 @@ const ProjectPage = async (props: {params: Promise<{id:number, locale:string}>})
   const readmeProject = locale === 'fr' ? project?.readme.split('-------------------------------------')[0] : project?.readme.split('-------------------------------------')[1]
   return (
     <>
-    <Matomo />
       <div className={styles.backToHome}>
         <Link href={'/'} title={translate('project.backToHome')}>{translate('project.backToHome')}</Link>
       </div>
