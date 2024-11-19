@@ -9,14 +9,6 @@ import SwitchLanguage from "../ui/_components/SwitchLanguage"
 import { setStaticParamsLocale } from "next-international/server"
 
 export default async function Home(props: {params: Promise<{locale:string}>}) {
-  // Matomo Analytics
-  var _mtm = window._mtm = window._mtm || [];
-  _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
-  (function() {
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src='https://matomo.webapps24.eu/js/container_KuuFIAlX.js'; s.parentNode.insertBefore(g,s);
-  })();
-  
   const {locale} = await props.params
   setStaticParamsLocale(locale)
   const {projects, messageError} = await Projects.get_all()
