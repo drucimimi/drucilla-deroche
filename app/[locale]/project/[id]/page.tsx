@@ -23,6 +23,7 @@ const ProjectPage = async (props: {params: Promise<{id:number, locale:string}>})
   const {project, messageError} = await Projects.get_by_id(id)
   const projectOpenIssues = project && project!.items.nodes.filter( issue => issue.content.state === 'OPEN')
   const readmeProject = locale === 'fr' ? project?.readme.split('-------------------------------------')[0] : project?.readme.split('-------------------------------------')[1]
+  console.log(project?.shortDescription)
   return (
     <>
       <div className={styles.backToHome}>
@@ -30,7 +31,7 @@ const ProjectPage = async (props: {params: Promise<{id:number, locale:string}>})
       </div>
       <SwitchLanguage />
       {project ? <><header className={styles.projectHeader}>
-        <Image src={project!.shortDescription.includes("http") ? project!.shortDescription.replace('![Image]', '').replace('(', '').replace(')', '') : '/images/default-project-image.jpg'} width={200} height={200} alt={project!.title}/>
+        <Image src={project!.shortDescription.includes("http") ? project!.shortDescription.replace("![Image](", "").replace(")", "").trimEnd()  : '/images/default-project-image.jpg'} width={200} height={200} alt={project!.title}/>
         <h1>{project!.title}</h1>
       </header>
       <main className={styles.projectMain}><section>
